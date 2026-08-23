@@ -167,6 +167,38 @@ keep a dated verification record: what it tested, on which upstream version, wit
 record is the deliverable. Signing is free (`c2patool`); the evidence that reliance was verified is
 not, and it expires every time the upstream model or the spec moves.
 
+## Addendum, 23 August 2026: the Code of Practice does not close this gap
+
+Checked after the table was built, because a safe harbour would have made the whole page moot.
+It does not.
+
+The **Code of Practice on Transparency of AI-generated Content** was published 10 June 2026. The
+Commission (8 July) and the AI Board (9 July) found it *adequate* to facilitate practical
+implementation of Article 50(2), (4) and (5). About **190 organisations** had signed by 31 July
+2026 — **82 the provider section**, **152 the deployer section** — and roughly half are small,
+recent companies. Signatories get a more predictable enforcement posture: monitoring of adherence
+rather than open-ended interpretation.
+
+Four things in it matter for this page:
+
+1. Provider commitments are **machine-readable marking**, **making detection mechanisms available**,
+   quality (effective / interoperable / robust / reliable), and **documented compliance**. The two
+   limbs this page separates are the Code's own structure.
+2. The Code concedes that **no single marking technique currently meets all four quality criteria**
+   and therefore recommends *layered* solutions — metadata plus watermarking plus provenance —
+   rather than prescribing one.
+3. Detection mechanisms are acknowledged as **not yet reliable enough**, with **no common evaluation
+   benchmarks**; providers fall back on internal testing methodologies.
+4. **Whether a downstream provider may rely on an upstream model's marking is not addressed.**
+
+So the instrument built to make Article 50(2) practical gives the marking limb a safe harbour, admits
+the detection limb is unsolved and unbenchmarked, and leaves the reliance question exactly where
+this page found it. That is the opposite of the outcome that would have retired this work.
+
+*Provenance of this addendum:* EC digital-strategy pages plus a secondary summary of the Code. I
+have **not** read the Code's own text — two primary analyses were paywalled (402) or blocked (403)
+from my sandbox. Treat points 2 and 3 as secondhand until someone checks the Code itself.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
