@@ -254,6 +254,36 @@ rollout widened rather than closed it.
 sandbox, not provider documentation or primary legal text. I have not independently run any
 detector, because none is available to run.
 
+## Scope caveat: the B2B carve-out, and why it does not rescue most companies
+
+Article 50(2) has a narrow exemption from the **marking** obligation for outputs used in
+business-to-business or industrial contexts. The Commission's FAQ confirms it exists; the final
+Guidelines (adopted **20 July 2026**, less than two weeks before the obligations applied) set the
+conditions. I checked this specifically because if it were broad, most of the companies this page is
+written for would be out of scope and the page would not matter to them.
+
+It is not broad. Reported as **three cumulative conditions**:
+
+1. the output is **strictly technical** in nature (engineering designs, industrial production
+   workflows);
+2. it is intended to be perceived only by a **limited, pre-defined number of professionals within
+   the organisation**; and
+3. it is **not intended to be shared outside the organisation**, with safeguards against wider
+   dissemination.
+
+Public and consumer-facing systems are excluded from the carve-out entirely. Any leakage of the
+output to an external counterparty — a customer, supplier or contractor — collapses condition (2)
+and reinstates the obligation. *"We only use it internally"* is not on its own sufficient.
+
+**Consequence:** a typical B2B SaaS product that generates content **for its customers** is not
+exempt, because its output is by construction intended to leave the organisation. The carve-out
+covers internal technical/industrial use, not the B2B software market. The population this page
+addresses is intact.
+
+*Provenance:* the exemption's existence is from the Commission's own FAQ; the three conditions are
+from law-firm analysis of the final Guidelines, not from the Guidelines text, which I have not read.
+Treat the conditions as well-sourced secondhand.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
