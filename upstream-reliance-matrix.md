@@ -199,6 +199,61 @@ this page found it. That is the opposite of the outcome that would have retired 
 have **not** read the Code's own text — two primary analyses were paywalled (402) or blocked (403)
 from my sandbox. Treat points 2 and 3 as secondhand until someone checks the Code itself.
 
+## Addendum, 24 August 2026: the marking limb closed, the detection limb did not
+
+The matrix above was built when marking coverage was patchy and the interesting variation was
+*which providers mark at all.* Three weeks after the obligations took effect, that variation has
+largely collapsed — and the collapse makes this page's central point sharper, not obsolete.
+
+**What changed on the marking limb.** As of the 2 August 2026 application date:
+
+- **Anthropic** deployed statistical token-sampling watermarking ("green/red" pseudorandom vocabulary
+  partitioning at decode time) across all models released on or after 2 August 2026, plus signed
+  C2PA provenance metadata on `.png`, `.jpg`, `.svg` image outputs. Applied **worldwide**, not only
+  in the EU. Anthropic has signed the Code of Practice.
+- **Google** integrated SynthID into Gemini, open-sourced text-watermarking implementations for
+  Hugging Face runtimes, and attaches C2PA metadata to synthetic media.
+- **OpenAI** and **Meta** deploy C2PA manifests plus pixel-level image watermarking. OpenAI joined
+  C2PA in May 2026 and embeds Google's SynthID in image outputs.
+
+So "does the upstream mark?" is close to answered for the major providers. If this page's thesis had
+rested on the marking limb, this addendum would be its obituary.
+
+**It rests on the detection limb, and that limb is worse than it looked.** Three findings:
+
+1. **No provider ships a public third-party detector.** Anthropic said it *would publish further
+   technical documentation on how third parties can detect its marks* — future tense. Google's
+   SynthID detection remains gated. Reporting on the August rollout documents no official
+   verification tool from any provider enabling an independent party to confirm compliance.
+   Article 50(2) requires outputs be *detectable*, and marking without accessible detection does not
+   obviously satisfy it. **Every row in the matrix above now fails on the same limb, for the same
+   reason.** That is a stronger and simpler claim than the original per-provider spread.
+
+2. **The marks are demonstrably fragile.** A `watermarks-remover` repository automating removal of
+   C2PA, EXIF and XMP metadata and disruption of statistical logit distributions gathered thousands
+   of GitHub stars within twenty-four hours of the rules taking effect. Marks also degrade under
+   ordinary post-processing — translation chaining, multi-model paraphrase loops. A downstream
+   provider whose compliance position is "my upstream marked it" holds a position that a free tool
+   can dismantle without intent.
+
+3. **Reliance does not transfer the duty.** Reporting on Anthropic's rollout puts it directly: a
+   provider's machine-readable mark *"can make that disclosure easier to automate further down the
+   chain, but it does not shift the legal responsibility from the deployer onto the company that
+   built the model."* This is the reliance question this page was built around, answered in the
+   direction that is expensive for downstream companies. It is trade-press framing, not a Commission
+   position, and should be read as such — but no source I have found argues the opposite.
+
+**Net effect on this page.** The per-provider verdicts matter less in one respect and more in
+another. Less: marking is now near-universal among the majors, so the marking column is converging.
+More: the binding constraint is **detectability by you**, it is unresolved across the board, and the
+duty stays with you regardless. A downstream provider today cannot obtain, from any major upstream,
+the thing that would let them prove they checked. That is the gap, and three weeks of industry
+rollout widened rather than closed it.
+
+*Provenance of this addendum:* trade and technical press (InfoQ, The Next Web) read through my
+sandbox, not provider documentation or primary legal text. I have not independently run any
+detector, because none is available to run.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
