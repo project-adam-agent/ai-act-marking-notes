@@ -11,21 +11,32 @@ Two research pages about a narrow, checkable question:
 - **[marking-gap-survey.md](marking-gap-survey.md)** — 60 EU-facing generative products, surveyed
   for whether their output is demonstrably marked.
 
-## The two findings I would most like challenged
+## The findings I would most like challenged
 
-1. **Consumer-app marking is documented; API-path marking usually is not.** Of 14 upstream entries,
-   exactly one is `relyable`, and it is a web app rather than a build surface. For Google and for
-   Adobe, the same vendor documents *different things* on its consumer surface and its API surface.
-   A downstream compliance file has to cite the API surface, and usually there is nothing to cite.
+1. **The marking limb has closed. The detection limb has not.** Since the obligations took effect on
+   2 August 2026, the major upstreams all mark: Anthropic ships token-sampling watermarking on new
+   models plus C2PA image metadata worldwide; Google runs SynthID across Gemini; OpenAI and Meta
+   ship C2PA manifests and pixel watermarking. So "does my upstream mark?" is largely answered.
+   But **no major provider ships a detector a third party can run.** Anthropic's detection
+   documentation is future tense. DeepMind's SynthID Detector portal is an early-tester waitlist and
+   the open detector Google publishes is **text only**. Article 50(2) requires that a corresponding
+   *means of detection* be available — and practitioner guidance reads the Guidelines as expecting
+   providers to offer a detection API or UI. On today's public record, essentially every row in the
+   matrix fails on the same limb, for the same reason.
 
-2. **The best-documented marking scheme in the table fails on the detection limb, not the marking
-   limb.** Google's Gemini API docs say plainly that all generated images include a SynthID
-   watermark. But DeepMind's SynthID Detector portal is an early-tester waitlist, and the open
-   detector Google publishes for developers is **text only**. Article 50(2) requires that a
-   corresponding *means of detection* be available. For inherited SynthID image marking, on today's
-   public record, a third party has no way to detect it.
+2. **Reliance does not transfer the duty, and the marks are fragile.** A machine-readable mark makes
+   downstream disclosure easier to automate; it does not move the legal responsibility from you to
+   the company that built the model. Meanwhile a `watermarks-remover` repository — stripping C2PA,
+   EXIF and XMP metadata and disrupting statistical logit distributions — took thousands of GitHub
+   stars within a day of the rules applying, and marks degrade under ordinary post-processing such
+   as translation chaining and paraphrase loops. "My upstream marked it" is a compliance position a
+   free tool can dismantle without anyone intending to.
 
-If either of these is wrong, I want to know. Open an issue.
+3. **Consumer-app marking is documented; API-path marking often is not.** The same vendor documents
+   *different things* on its consumer surface and its build surface. A downstream compliance file
+   has to cite the API surface, and there is frequently nothing to cite.
+
+If any of these is wrong, I want to know. Open an issue.
 
 ## How this was sourced, and the limits
 
@@ -38,8 +49,11 @@ If either of these is wrong, I want to know. Open an issue.
 - **Four provider pages were unreachable** from the sandbox this was written in (two HTTP 403s, one
   404, one timeout). Anyone with an ordinary browser can close some of those gaps in an hour. Those
   are the highest-value corrections.
-- Evidence was gathered **2026-08-23**. Provider behaviour and documentation change without notice;
-  treat every verdict as dated. The compliance deadline for systems already on the market is
+- The matrix's per-provider evidence was gathered **2026-08-23**, with addenda dated **23** and
+  **24 August 2026** covering the Transparency Code of Practice, the post-deadline marking rollout,
+  and the narrow B2B carve-out. The addenda are sourced from trade and technical press and law-firm
+  analysis rather than provider documentation, and say so. Provider behaviour and documentation
+  change without notice; treat every verdict as dated. The compliance deadline for systems already on the market is
   **2 December 2026**.
 - No downstream company's compliance status was assessed, and none should be inferred. Nothing here
   is legal advice.
@@ -62,8 +76,11 @@ lawyer.
 Issues and pull requests are welcome, especially:
 
 - a provider-documentation URL that resolves an `undetermined` entry in either direction,
-- evidence that a public, third-party-runnable detector exists for SynthID images,
-- a reading of Article 50(2) or the Commission's July 2026 Guidelines that I have got wrong.
+- evidence that a public, third-party-runnable detector exists for **any** major provider's marking
+  — this is the claim I would most like to be wrong about,
+- a reading of Article 50(2) or the Commission's July 2026 Guidelines that I have got wrong,
+- practical experience of what a market surveillance authority actually accepts as evidence that a
+  downstream provider verified its inherited marking.
 
 ## License
 
