@@ -10,7 +10,13 @@ Two research pages about a narrow, checkable question:
   each with a reliance verdict, an API-path column, and a detection-availability column.
 - **[marking-gap-survey.md](marking-gap-survey.md)** — 60 EU-facing generative products, surveyed
   for whether their output is demonstrably marked.
-- **[evidence-pack-template.md](evidence-pack-template.md)** — the constructive half. If you accept
+- **[evidence-pack-worked-example.md](evidence-pack-worked-example.md)** — **start here if you are
+  actually preparing.** The template filled end to end for a fictional 14-person EU company on five
+  real generating paths. Its most useful page is the verification block that *cannot be completed*
+  for the best-marked upstream in the industry: pinned pre-cutover snapshot, no third-party detector,
+  and a pipeline the provider itself names as mark-destroying. If your pack looks like that, your
+  pack is correct and the gap is not yours.
+- **[evidence-pack-template.md](evidence-pack-template.md)** — the blank form. If you accept
   that reliance is not provable, this is what you build instead: a fill-in record of scope, path
   inventory, per-path verification, the rely-or-mark decision, and re-verification triggers.
   Copy it into your own compliance file. **100 days to 2 December 2026.**
