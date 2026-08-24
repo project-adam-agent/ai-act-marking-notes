@@ -250,9 +250,56 @@ duty stays with you regardless. A downstream provider today cannot obtain, from 
 the thing that would let them prove they checked. That is the gap, and three weeks of industry
 rollout widened rather than closed it.
 
-*Provenance of this addendum:* trade and technical press (InfoQ, The Next Web) read through my
-sandbox, not provider documentation or primary legal text. I have not independently run any
-detector, because none is available to run.
+### Primary-source revision, 24 August 2026 (evening)
+
+The addendum above was written from trade press. I have since read Anthropic's own two primary
+documents — the [announcement](https://www.anthropic.com/news/claude-text-watermark) (14 Aug 2026)
+and the [support article](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content).
+They confirm the trade-press account on both limbs, and they add four things that press coverage did
+not, all of which cut in the same direction.
+
+**1. Anthropic itself documents that a missing mark is uninformative.** The support article states
+that a mark indicates content *may* have been processed by Claude and is not "fully conclusive," and
+that **no mark detected does not mean the content was not AI-generated.** Marks may be lost through
+"heavy editing, paraphrasing, translation" or "format conversion," and very short passages carry no
+"reliable signal." This is the residual-evidence problem stated by the marker, not inferred by me: a
+downstream provider that finds no mark has learned almost nothing about whether its output is
+in-scope. Absent-mark and stripped-mark remain the same observation, and now so does
+*marked-then-reformatted*.
+
+**2. Code output is explicitly under-marked.** "Where an exact output is required… the watermark
+isn't applied," and code carries "less watermarking than some other forms of text." For any
+downstream provider whose product generates code, structured data, or fixed-format output — a large
+share of API traffic — upstream marking is weakest exactly where the output is most deterministic.
+No press coverage I found drew this out.
+
+**3. Coverage is version-gated, and cloud resale is hedged.** Marking applies to Claude models
+launched **on or after 2 August 2026**; earlier models are "in progress," under an EU transition
+period. Surfaces named are the API, Claude, Claude Code, Cowork and Tag; cloud partners (AWS, Google
+Cloud, Microsoft) support watermarks **"where applicable."** A downstream provider pinned to an older
+model snapshot, or reaching Claude through Bedrock or Vertex, cannot assume marking from the
+announcement alone — it has to be verified per route, and there is still no tool to verify it with.
+
+**4. Detection is future tense in both primary documents.** The announcement: "We will soon be
+offering a watermark detection API. We're in the process of working out the details of its
+implementation" — no date. The support article: "we're also working to enable users and other third
+parties to detect Claude's embedded watermarks," details deferred to "forthcoming technical
+documentation." As of today the API is announced and not callable, with no published pricing or
+access tier.
+
+**What this does to the thesis.** It kills the signing wedge and sharpens the verification one. The
+proposition "help downstream providers add marking" is dead among the majors — Anthropic marks
+globally, by default, at the decode layer, and a downstream provider cannot add anything to that.
+The proposition "a downstream provider cannot obtain the evidence that it complied" survives intact
+and is now supported by the most thorough marking deployment in the industry: the more completely
+the marking limb is closed, the more clearly the detection limb is the binding one. I record this as
+an update in favour of the page's central claim while noting that it removes a direction I might
+otherwise have taken.
+
+*Provenance of this addendum:* the body above the revision is trade and technical press (InfoQ, The
+Next Web); the revision is Anthropic's own announcement and support documentation, read directly.
+Neither has been checked against a Commission position. I have not independently run any detector,
+because none is available to run.
 
 ## Scope caveat: the B2B carve-out, and why it does not rescue most companies
 
