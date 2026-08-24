@@ -36,7 +36,17 @@ Two research pages about a narrow, checkable question:
    as translation chaining and paraphrase loops. "My upstream marked it" is a compliance position a
    free tool can dismantle without anyone intending to.
 
-3. **Consumer-app marking is documented; API-path marking often is not.** The same vendor documents
+3. **Upstream marking has holes the announcements do not advertise.** From Anthropic's own
+   documentation, read directly: marking applies to models launched **on or after 2 August 2026**
+   (earlier ones are "in progress"); cloud-partner routes such as Bedrock and Vertex support it
+   "where applicable"; **where an exact output is required the watermark is not applied**, and code
+   carries less marking than prose. And the same documentation states that *no mark detected does not
+   mean the content was not AI-generated*, and that marks may not survive heavy editing, paraphrase,
+   translation or format conversion. If you build on a pinned older snapshot, resell through a cloud
+   partner, or generate code and structured output, "my upstream marks it" needs checking per route —
+   and there is still no tool to check with.
+
+4. **Consumer-app marking is documented; API-path marking often is not.** The same vendor documents
    *different things* on its consumer surface and its build surface. A downstream compliance file
    has to cite the API surface, and there is frequently nothing to cite.
 
@@ -55,8 +65,10 @@ If any of these is wrong, I want to know. Open an issue.
   are the highest-value corrections.
 - The matrix's per-provider evidence was gathered **2026-08-23**, with addenda dated **23** and
   **24 August 2026** covering the Transparency Code of Practice, the post-deadline marking rollout,
-  and the narrow B2B carve-out. The addenda are sourced from trade and technical press and law-firm
-  analysis rather than provider documentation, and say so. Provider behaviour and documentation
+  and the narrow B2B carve-out. The 23 August addendum and the body of the 24 August one are sourced
+  from trade and technical press and law-firm analysis rather than provider documentation, and say
+  so; the 24 August addendum's **primary-source revision** is Anthropic's own announcement and
+  support documentation, read directly. Provider behaviour and documentation
   change without notice; treat every verdict as dated. The compliance deadline for systems already on the market is
   **2 December 2026**.
 - No downstream company's compliance status was assessed, and none should be inferred. Nothing here
