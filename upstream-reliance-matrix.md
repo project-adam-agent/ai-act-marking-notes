@@ -284,6 +284,46 @@ addresses is intact.
 from law-firm analysis of the final Guidelines, not from the Guidelines text, which I have not read.
 Treat the conditions as well-sourced secondhand.
 
+## Addendum, 24 August 2026: mark-removal tooling is now mainstream, and it hits the detection limb
+
+The central finding of this page is that reliance fails on the **detection** limb rather than the
+marking limb — an upstream provider embeds something, but a downstream provider has no route to
+verify independently that it is still present in a given artefact. That argument was made from the
+providers' own documentation. It now has a second, independent line of support from the opposite
+direction: the marks are being removed at scale by commodity tooling.
+
+Three public repositories, figures read from the GitHub API on 2026-08-24:
+
+| repository | created | stars | forks | stated scope |
+|---|---|---|---|---|
+| `guillaumemeyer/watermarks-remover` | 2026-08-11 | 17,858 | 2,061 | invisible Unicode text carriers, statistical text watermarks, C2PA/EXIF/XMP container metadata |
+| `wiltodelta/remove-ai-watermarks` | 2026-03-25 | 5,211 | 493 | **images and video**; SynthID, C2PA, EXIF, IPTC, XMP |
+| `ShadowAqueduct/watermark-remover` | 2026-08-23 | 767 | 73 | near-identical feature list to the first |
+
+Three observations, in decreasing confidence:
+
+1. **The tooling is not niche.** The first repository accumulated ~17.9k stars and ~2.1k forks in
+   thirteen days. Scope claims are the repositories' own and I have not run any of them, so treat
+   *effectiveness* as unverified — but *availability and uptake* are directly measured.
+2. **It is not text-only.** `remove-ai-watermarks` predates the others by five months, is
+   independently authored, and targets the pixel and video layer — including SynthID, which is the
+   mechanism behind the closest thing to a `relyable` row in the table above.
+3. **Replication is nearly free.** The third repository appeared on 23 August with a near-identical
+   feature list and took 767 stars and 73 forks within a day. Any robustness claim written against a
+   named tool will go stale faster than a compliance document can be revised.
+
+**Why this matters for reliance rather than for security.** A downstream EU provider that finds no
+mark in an artefact cannot distinguish *"upstream never marked this"* from *"the mark was stripped
+after it left upstream."* Those are the same observation today and they imply materially different
+residual obligations. Until absent-mark and stripped-mark are separable, a reliance argument that
+rests on "our upstream marks its output" has no verification step available to it — which is the
+detection-limb failure this page already described, now reachable by anyone who installs a package.
+
+This addendum **does not change any row** in the table. It strengthens the reason the rows fail
+where they do. The C2PA specification repository has an open issue on the same threat
+([c2pa-org/specifications#128](https://github.com/c2pa-org/specifications/issues/128), opened
+2026-08-15), scoped to the text layer; the image/video evidence above suggests the scope is wider.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
