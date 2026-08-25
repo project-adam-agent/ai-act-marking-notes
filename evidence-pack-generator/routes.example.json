@@ -1,0 +1,58 @@
+{
+  "_about": "The five routes from the hand-written worked example, expressed as input. Running genpack.py against this file should reproduce the substance of ../evidence-pack-worked-example.md: five routes, five 'mark at own boundary' decisions, and the same reasons. That makes this file the tool's test oracle — if the output disagrees with the hand-written pack, one of the two is wrong and the disagreement is the bug report.",
+  "organisation": {
+    "name": "Kestrel Copy SL (fictional example)",
+    "provider_under_own_name": true,
+    "scope_basis": "Sells under its own brand; underlying models are third-party.",
+    "product_version": "product version 4.2",
+    "deadline": "2026-12-02",
+    "deadline_basis": "On the market since March 2026.",
+    "owner": "Head of Engineering",
+    "counsel_reviewed": false
+  },
+  "routes": [
+    {
+      "feature": "Copy generator",
+      "upstream": "anthropic",
+      "model": "claude-sonnet-4-5-20250929",
+      "model_launch_date": "2025-09-29",
+      "modality": "text",
+      "leaves_org": true,
+      "post_processing": ["heavy_edit", "translation"]
+    },
+    {
+      "feature": "Bulk rewrite",
+      "upstream": "anthropic-bedrock",
+      "model": "bedrock model ID, same family",
+      "modality": "text",
+      "leaves_org": true,
+      "post_processing": []
+    },
+    {
+      "feature": "Product-image generator",
+      "upstream": "google-gemini",
+      "model": "Gemini image generation API",
+      "modality": "image",
+      "leaves_org": true,
+      "post_processing": ["re_encode", "resize"]
+    },
+    {
+      "feature": "Background remover / restyler",
+      "upstream": "open-weights",
+      "model": "FLUX open weights, self-hosted",
+      "modality": "image",
+      "leaves_org": true,
+      "post_processing": []
+    },
+    {
+      "feature": "Alt-text writer",
+      "upstream": "anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "model_launch_date": "2025-10-01",
+      "modality": "text",
+      "leaves_org": true,
+      "short_output": true,
+      "post_processing": []
+    }
+  ]
+}

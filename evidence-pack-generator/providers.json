@@ -1,0 +1,90 @@
+{
+  "_about": "Upstream marking/detection facts used to pre-fill Article 50(2) evidence packs. Only entries with a source_url were verified by the author against a primary source on the stated date. Entries with marking_claim null are deliberately blank: the tool will tell you to check them yourself rather than guess. Nothing here is legal advice.",
+  "_schema": {
+    "detection_third_party": "yes | waitlist | text_only | no | undetermined",
+    "marking": "global | partial | none | undetermined",
+    "cutover_date": "ISO date; models launched before this are not covered by the marking claim, or null if not applicable",
+    "caveats": "list; each item is either a plain string (applies to every route) or {modalities: [...], note: '...'} to scope it"
+  },
+  "providers": {
+    "anthropic": {
+      "display": "Anthropic (direct Messages API / Claude / Claude Code)",
+      "marking": "global",
+      "marking_claim": "Embedded watermarks apply to all generated text across the Claude Platform (API), Claude, Claude Code, Claude Cowork and Claude Tag, for models launched on or after 2 August 2026. Support for earlier models is 'in progress'. Supported generated files also receive signed C2PA provenance metadata.",
+      "cutover_date": "2026-08-02",
+      "covered_surfaces": ["api", "consumer_app", "coding_agent"],
+      "detection_third_party": "no",
+      "detection_note": "Detection is stated in the future tense with no date: 'We're also working to enable users and other third parties to detect Claude's embedded watermarks and provenance metadata.' 'We'll share details on detection mechanisms in forthcoming technical documentation.'",
+      "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "source_url_2": "https://www.anthropic.com/news/claude-text-watermark",
+      "last_checked": "2026-08-25",
+      "caveats": [
+        {"modalities": ["text"], "note": "The text mark is a statistical token-sampling watermark. It is not a header or a response field; inspecting the API response tells you nothing."},
+        {"modalities": ["text"], "note": "Provider states marks may be lost through heavy editing, paraphrasing, translation or format conversion."},
+        {"modalities": ["text"], "note": "Very short passages carry no reliable signal; detection does not work well on small samples."},
+        {"modalities": ["text"], "note": "Where an exact output is required (deterministic / constrained decoding), the sampling watermark cannot be applied."},
+        {"modalities": ["image", "audio", "video"], "note": "For generated files the provider's mechanism is signed C2PA provenance metadata, not the text watermark. C2PA metadata is a container manifest and is commonly stripped by re-encoding, resizing or upload pipelines that rewrite the file."}
+      ]
+    },
+    "anthropic-bedrock": {
+      "display": "Anthropic via AWS Bedrock (resale route)",
+      "marking": "undetermined",
+      "marking_claim": "The Anthropic support article states cloud partners AWS, Google Cloud and Microsoft Foundry 'support watermarks where applicable'. 'Where applicable' is not a commitment about a specific resale surface, and no cloud-partner-controlled page was found stating whether marking is applied on this route.",
+      "cutover_date": "2026-08-02",
+      "covered_surfaces": [],
+      "detection_third_party": "no",
+      "detection_note": "Same as the direct route, and one further hop from the issuer.",
+      "source_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "last_checked": "2026-08-25",
+      "resale": true,
+      "caveats": [
+        "Resale routes are the most under-examined rows in most inventories: the announcement you read belongs to the model provider, the surface you call belongs to the cloud partner.",
+        "Open a support ticket with the cloud partner. An unanswered ticket, dated, is itself evidence of diligence."
+      ]
+    },
+    "google-gemini": {
+      "display": "Google Gemini (SynthID)",
+      "marking": "global",
+      "marking_claim": "SynthID is applied to Gemini output per Google documentation. The marking limb is credible here.",
+      "cutover_date": null,
+      "covered_surfaces": ["api", "consumer_app"],
+      "detection_third_party": "waitlist",
+      "detection_note": "The SynthID Detector portal is not open to the public; access is via waitlist with journalists, media professionals and researchers reviewed first, and no published timeline for general availability. The openly published SynthID implementation is TEXT ONLY, so image marks cannot be checked by a downstream provider. Third parties cannot cryptographically verify the mark; that requires Google's keys.",
+      "source_url": "https://deepmind.google/technologies/synthid/",
+      "last_checked": "2026-08-25",
+      "caveats": [
+        {"modalities": ["text"], "note": "Signal is weakened by short or highly factual outputs and largely destroyed by rewriting or translating the text."},
+        {"modalities": ["image", "audio", "video"], "note": "The image/audio/video mark is a pixel- or sample-domain watermark, not container metadata, so it survives some edits that strip metadata — but the openly published SynthID implementation is text-only, so you have no way to check either way."},
+        "Answers 'was this generated by a participating model', not 'is this human'."
+      ]
+    },
+    "open-weights": {
+      "display": "Self-hosted open-weight model (FLUX, Llama, Mistral weights, etc.)",
+      "marking": "none",
+      "marking_claim": "None. Open weights inherit nothing. The Article 50(2) obligation is entirely yours.",
+      "cutover_date": null,
+      "covered_surfaces": [],
+      "detection_third_party": "no",
+      "detection_note": "Not applicable — there is no upstream marking to detect.",
+      "source_url": null,
+      "last_checked": "2026-08-25",
+      "caveats": [
+        "This path was never a reliance candidate. Recording it takes two minutes; omitting it leaves a hole in the inventory."
+      ]
+    },
+    "unknown": {
+      "display": "Upstream not present in this dataset",
+      "marking": "undetermined",
+      "marking_claim": null,
+      "cutover_date": null,
+      "covered_surfaces": [],
+      "detection_third_party": "undetermined",
+      "detection_note": null,
+      "source_url": null,
+      "last_checked": null,
+      "caveats": [
+        "This generator does not have verified facts for this upstream. Do not let a blank here become an implied 'fine'. Find the provider's own marking page, record the URL and the date you read it, and paste both into this block."
+      ]
+    }
+  }
+}

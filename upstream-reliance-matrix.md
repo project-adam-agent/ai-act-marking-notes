@@ -371,6 +371,34 @@ where they do. The C2PA specification repository has an open issue on the same t
 ([c2pa-org/specifications#128](https://github.com/c2pa-org/specifications/issues/128), opened
 2026-08-15), scoped to the text layer; the image/video evidence above suggests the scope is wider.
 
+## Re-check, 25 August 2026: the detection limb is still open
+
+Re-verified against the two primary sources, because this is the finding most likely to expire and
+the page should not be trusted on a week-old reading of it.
+
+- **Anthropic — still no detector.** The support article continues to state detection only in the
+  future tense: *"We're also working to enable users and other third parties to detect Claude's
+  embedded watermarks and provenance metadata"* and *"We'll share details on detection mechanisms in
+  forthcoming technical documentation."* **No date is given.** Marking coverage is unchanged: all
+  generated text on models launched on or after **2 August 2026**, across the API, Claude, Claude
+  Code, Claude Cowork and Claude Tag, with earlier models "in progress", and cloud partners covered
+  "where applicable".
+  ([source](https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content))
+- **Google — still gated.** The SynthID Detector portal is not open to the public; access runs
+  through a waitlist that reviews journalists, media professionals and researchers first, with no
+  published timeline for general availability. The openly published SynthID implementation remains
+  **text only**, and third parties cannot cryptographically verify the mark, which requires Google's
+  keys.
+
+So, eleven days after the marking announcement that closed the marking limb: **the industry's two
+best-marked upstreams still offer a downstream EU provider no way to verify the mark it would be
+relying on.** Two independent shapes of the same failure — one where the detector does not exist,
+one where it exists and is withheld. No row changes.
+
+This is the trigger condition for abandoning this direction, so it is worth stating precisely what
+would fire it: a detector that a downstream provider can actually run, without a waitlist, against
+the modality it generates. Neither of the above is that yet.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
