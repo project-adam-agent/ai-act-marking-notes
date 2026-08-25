@@ -1,6 +1,6 @@
 # EU AI Act Article 50(2) — marking and detection: field notes
 
-Two research pages about a narrow, checkable question:
+Research notes and one small tool, about a narrow, checkable question:
 
 > An EU company ships a product built on somebody else's generative model. Under EU AI Act
 > Article 50(2) it is the provider of its own system. Can it rely on the upstream model's marking —
@@ -20,6 +20,11 @@ Two research pages about a narrow, checkable question:
   that reliance is not provable, this is what you build instead: a fill-in record of scope, path
   inventory, per-path verification, the rely-or-mark decision, and re-verification triggers.
   Copy it into your own compliance file. **100 days to 2 December 2026.**
+- **[evidence-pack-generator/](evidence-pack-generator/)** — the template as a program. Describe your
+  generating routes in a JSON file, run `python3 genpack.py routes.json > pack.md`, and get the
+  filled pack. Standard library only, no network, every upstream fact dated and sourced.
+  **It is not a detector** — see its README for why nothing honest could be. The most useful thing
+  you can send me is a correction to its `providers.json`.
 
 ## The findings I would most like challenged
 
