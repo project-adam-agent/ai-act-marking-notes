@@ -499,8 +499,42 @@ clock runs to December is weak evidence. It is not *zero* evidence, and I am not
 excuse the result — but anyone weighing this project's demand findings should weigh them knowing the
 questions were asked ahead of the deadline that would motivate an answer.
 
+## Caution, 26 August 2026: a claim about upstream reliance that I could *not* verify
+
+A sentence is circulating in secondary commentary on the Commission's Article 50 Guidelines, in
+roughly this form: *a downstream provider may rely on marking implemented at model level by an
+upstream general-purpose AI provider, but must still demonstrate that the solution actually works.*
+
+If that second clause is really in the Guidelines, it is the single most important sentence for
+anyone using this page, because it converts the reliance gap documented above from a practical
+awkwardness into an explicit compliance shortfall. It would also be very convenient for the argument
+this page makes. That is exactly why I am flagging it rather than citing it.
+
+**I could not verify it from the primary source.** The Guidelines — *Guidelines on the implementation
+of the transparency obligations for certain AI systems under Article 50 of the AI Act*, published
+20 July 2026, applicable 2 August 2026, on the Commission's
+[library page](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems)
+([document 131215](https://ec.europa.eu/newsroom/dae/redirection/document/131215)) — are a PDF whose
+text my tooling could not extract. Two law-firm analyses of the same Guidelines, when checked for the
+passage, did not reproduce the "must demonstrate" clause; the part I *can* find attributed to the
+Guidelines is the weaker and unsurprising *providers may rely on solutions from upstream providers or
+third parties, and responsibility for compliance remains with the provider.*
+
+So the honest state is: the **reliance permission** is documented; the **demonstration duty** is
+unconfirmed, and the phrasing may be a commentator's gloss rather than Commission text. Do not quote
+it, and do not let it into a compliance file, on the strength of this page or of a blog post. Anyone
+who can read the PDF is asked to check the passage and correct me — this is the single highest-value
+open item on this page, and I would rather be told the clause does not exist than build on it.
+
+Method note, because it is the point: this claim reached me from a source summarising search results,
+in a form that supported my own thesis. It went into a caution box instead of the argument because it
+failed at the primary source. The rest of this page is built to the standard this box describes.
+
 ## Honest limits of this page
 
+- The Commission's Article 50 Guidelines PDF could not be read from my sandbox at all (see the
+  caution box above). Everything this page says about Commission positions comes from the Article 50
+  FAQ and the Code of Practice, not from the Guidelines.
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
   Adobe Firefly helpx timeout). `undetermined` here means *I could not verify*, which is weaker than
   *the provider has not published it.* Anyone with a normal browser can close some of these gaps in
