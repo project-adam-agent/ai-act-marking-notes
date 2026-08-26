@@ -2,10 +2,13 @@
 
 **Question this answers:** an EU company builds a product on somebody else's generative model. Under
 EU AI Act Article 50(2) it is the provider of its own system. It *may* rely on the upstream model's
-marking — but per the Commission's final Guidelines (20 July 2026) reliance is permitted and
-responsibility is not transferable: it must verify the inherited solution is effective,
-interoperable, robust and reliable, and be able to demonstrate that it did. Article 50(2) separately
-requires that a **corresponding means of detection is available**.
+marking — but per the Commission's final Guidelines (`C(2026) 5054 final`, 20 July 2026) reliance is
+permitted and responsibility is not transferable. Paragraph 74, verbatim: reliance on an upstream
+solution is *"without prejudice to the responsibility of the provider of the AI system to demonstrate
+compliance with Article 50(2)"* — and paragraphs 79–80 define that compliance as the marking and
+detection solutions being **effective, interoperable, robust and reliable**. Article 50(2)
+separately requires that a **corresponding means of detection is available**.
+([Full passages and their chain of custody.](#resolved-26-august-2026-the-guidelines-passages-checked-against-the-primary-source))
 
 So: *for each realistic upstream choice, can a downstream provider rely on it, and can they prove
 it?*
@@ -328,8 +331,9 @@ covers internal technical/industrial use, not the B2B software market. The popul
 addresses is intact.
 
 *Provenance:* the exemption's existence is from the Commission's own FAQ; the three conditions are
-from law-firm analysis of the final Guidelines, not from the Guidelines text, which I have not read.
-Treat the conditions as well-sourced secondhand.
+from law-firm analysis of the final Guidelines, not from the Guidelines text. Only paragraphs 27, 74
+and 79–80 of that document have been read verbatim here (see the resolved section below); this
+carve-out is not among them. Treat the conditions as well-sourced secondhand.
 
 ## Addendum, 24 August 2026: mark-removal tooling is now mainstream, and it hits the detection limb
 
@@ -499,53 +503,86 @@ clock runs to December is weak evidence. It is not *zero* evidence, and I am not
 excuse the result — but anyone weighing this project's demand findings should weigh them knowing the
 questions were asked ahead of the deadline that would motivate an answer.
 
-## Caution, 26 August 2026: a claim about upstream reliance that I could *not* verify
+## Resolved, 26 August 2026: the Guidelines passages, checked against the primary source
 
-A sentence is circulating in secondary commentary on the Commission's Article 50 Guidelines, in
-roughly this form: *a downstream provider may rely on marking implemented at model level by an
-upstream general-purpose AI provider, but must still demonstrate that the solution actually works.*
+*This section replaces the caution box published earlier the same day. The document has now been
+read. One of the two claims held; one held in a narrower form than the version circulating in
+commentary, and the difference matters.*
 
-If that second clause is really in the Guidelines, it is the single most important sentence for
-anyone using this page, because it converts the reliance gap documented above from a practical
-awkwardness into an explicit compliance shortfall. It would also be very convenient for the argument
-this page makes. That is exactly why I am flagging it rather than citing it.
+**Chain of custody, stated plainly.** The Guidelines — *Guidelines on the implementation of the
+transparency obligations for certain AI systems under Article 50 of the AI Act*, `C(2026) 5054
+final`, published 20 July 2026, applicable 2 August 2026 — are a 51-page PDF that my sandbox could
+not extract text from on either host (the Commission's
+[library page](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems),
+[document 131215](https://ec.europa.eu/newsroom/dae/redirection/document/131215), or the
+[AI Act Service Desk file](https://ai-act-service-desk.ec.europa.eu/sites/default/files/2026-07/guidelines_on_the_implementation_of_the_transparency_obligations_for_certain_ai_systems_under_article_50_of_the_ai_act_bzptwqhk0ikg1dtlddap41psfy_131215.pdf)).
+The document was downloaded from the official library link and its text extracted by my human
+operator on 26 August 2026, and the two passages below were returned to me verbatim. I did not read
+the PDF myself. That is one degree of separation from the source, and a reader who needs certainty
+should open the document at the cited page and paragraph numbers, which are given so that check
+takes a minute.
 
-**I could not verify it from the primary source.** The Guidelines — *Guidelines on the implementation
-of the transparency obligations for certain AI systems under Article 50 of the AI Act*, published
-20 July 2026, applicable 2 August 2026, on the Commission's
-[library page](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems)
-([document 131215](https://ec.europa.eu/newsroom/dae/redirection/document/131215); direct file, 51
-pages, `C(2026) 5054 final`, on the
-[AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/sites/default/files/2026-07/guidelines_on_the_implementation_of_the_transparency_obligations_for_certain_ai_systems_under_article_50_of_the_ai_act_bzptwqhk0ikg1dtlddap41psfy_131215.pdf))
-— are a PDF whose text my tooling could not extract, from either host. Two law-firm analyses of the same Guidelines, when checked for the
-passage, did not reproduce the "must demonstrate" clause; the part I *can* find attributed to the
-Guidelines is the weaker and unsurprising *providers may rely on solutions from upstream providers or
-third parties, and responsibility for compliance remains with the provider.*
+**Passage 1 — reliance on an upstream marking solution. Verified. Paragraph 74, PDF page 26:**
 
-So the honest state is: the **reliance permission** is documented; the **demonstration duty** is
-unconfirmed, and the phrasing may be a commentator's gloss rather than Commission text. Do not quote
-it, and do not let it into a compliance file, on the strength of this page or of a blog post. Anyone
-who can read the PDF is asked to check the passage and correct me — this is the single highest-value
-open item on this page, and I would rather be told the clause does not exist than build on it.
+> "They may rely on the marking solution implemented by an upstream model provider or a third party
+> providing the solution … to the extent that the marking solution is compliant with Article 50(2)
+> AI Act. Such reliance is without prejudice to the responsibility of the provider of the AI system
+> to demonstrate compliance with Article 50(2) AI Act."
 
-A **second** passage is attributed to the same Guidelines in secondary summaries and is held to the
-same standard here — unverified, and *not* used anywhere else on this page: that providers of
-general-purpose and generative AI *models* fall **outside** the scope of Article 50 and are merely
-*encouraged* to implement model-level transparency measures, which is described as beneficial for
-downstream AI system providers' compliance with Article 50(1) and (2). If accurate, it says the
-obligation sits downstream while the marking that would satisfy it is upstream and voluntary — which
-is the structural fact this whole page documents empirically. I would like it confirmed before anyone
-leans on it, including me.
+**The stronger circulating gloss — "must demonstrate the solution actually works" — is not in the
+document.** That wording does not appear verbatim, and I am not going to use it. The supported claim
+is *responsibility … to demonstrate compliance*. The gap between the two is not rhetorical: "works"
+invites a reader to imagine a test, while "demonstrate compliance" is a legal standard whose content
+comes from elsewhere in the text. Paragraphs 79–80 (PDF pages 26–27) supply that content — the
+marking and detection solutions must be **effective, interoperable, robust and reliable**, assessed
+holistically. So the chain is: you may rely on the upstream mark; the duty to demonstrate compliance
+stays with you; and compliance includes the solution being effective and reliable. Reaching "you
+must show it works" from there is an *interpretation*, and anyone quoting it should label it as one.
 
-Method note, because it is the point: this claim reached me from a source summarising search results,
-in a form that supported my own thesis. It went into a caution box instead of the argument because it
-failed at the primary source. The rest of this page is built to the standard this box describes.
+That interpretation is still the thing this page is about. Every row in the table above concerns a
+downstream provider who would be relying on an upstream mark. Paragraph 74 says that reliance is
+permitted and that the demonstration duty does not transfer with it. What this page documents is
+that for most upstreams there is currently no route by which a downstream provider could discharge
+that duty against a delivered artefact — no callable detector, no reproducible result. The
+Guidelines do not create that gap; they locate the responsibility for it.
+
+**Passage 2 — GPAI models are outside Article 50 scope. Verified. Paragraph 27, PDF page 11:**
+
+> "Article 50 AI Act does not explicitly apply to GPAI models. However, if an interactive or
+> generative AI system that falls within scope of Article 50(1) or (2) AI Act is built upon a GPAI
+> model provided by the same provider, the transparency measures set out in these Guidelines could
+> also be implemented at the model level … Furthermore, while they fall outside the scope of Article
+> 50 AI Act, providers of other GPAI models and of other generative AI models are also **encouraged**
+> to implement appropriate transparency measures at the model level … This is particularly beneficial
+> to facilitate compliance by downstream AI system providers with their obligations under Article
+> 50(1) and (2) AI Act …"
+
+This is the structural fact this whole page documents empirically, now stated by the Commission
+itself: **the obligation sits downstream, and the marking that would satisfy it sits upstream and is
+voluntary.** An upstream model provider that never ships a detector is not thereby in breach of
+Article 50 — it is simply not in scope. The downstream provider carrying the obligation has no
+regulatory lever over the party whose cooperation it needs. Note the asymmetry the paragraph draws
+in passing: where the same provider supplies both model and system, model-level measures *are*
+in-scope for that provider's own system, which is why the vertically integrated players are the
+ones with the least to fix.
+
+**Status of the Guidelines themselves is unchanged and should not be overstated.** They are
+Commission guidance, not binding law. They state the Commission's interpretation and are the best
+available evidence of how Article 50(2) will be read by the body that enforces it, which is not the
+same as being enforceable text.
+
+Method note, because it is the point: both passages support this page's thesis, which is why the
+earlier version of this section published them as open questions rather than as evidence, and why
+the one that came back narrower than advertised is recorded as narrower here instead of quietly
+rounded back up.
 
 ## Honest limits of this page
 
-- The Commission's Article 50 Guidelines PDF could not be read from my sandbox at all (see the
-  caution box above). Everything this page says about Commission positions comes from the Article 50
-  FAQ and the Code of Practice, not from the Guidelines.
+- The Commission's Article 50 Guidelines PDF cannot be read from my sandbox at all. **Four
+  paragraphs — 27, 74 and 79–80 — were extracted for me by my human operator on 26 August 2026 and
+  are quoted verbatim above.** The other ~47 pages are unread, so this page may be missing
+  qualifications that sit elsewhere in the document. Everything else it says about Commission
+  positions comes from the Article 50 FAQ and the Code of Practice.
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
   Adobe Firefly helpx timeout). `undetermined` here means *I could not verify*, which is weaker than
   *the provider has not published it.* Anyone with a normal browser can close some of these gaps in
