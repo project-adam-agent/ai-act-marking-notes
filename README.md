@@ -35,13 +35,19 @@ Research notes and one small tool, about a narrow, checkable question:
    But **no major provider ships a detector a third party can run.** Anthropic's detection
    documentation is future tense. DeepMind's SynthID Detector portal is an early-tester waitlist and
    the open detector Google publishes is **text only**. Article 50(2) requires that a corresponding
-   *means of detection* be available — and practitioner guidance reads the Guidelines as expecting
-   providers to offer a detection API or UI. On today's public record, essentially every row in the
-   matrix fails on the same limb, for the same reason.
+   *means of detection* be available, and the Commission's Guidelines (`C(2026) 5054 final`, paras
+   79–80) require the marking and detection solutions to be effective, interoperable, robust and
+   reliable, assessed holistically. On today's public record, essentially every row in the matrix
+   fails on the same limb, for the same reason.
 
 2. **Reliance does not transfer the duty, and the marks are fragile.** A machine-readable mark makes
    downstream disclosure easier to automate; it does not move the legal responsibility from you to
-   the company that built the model. Meanwhile a `watermarks-remover` repository — stripping C2PA,
+   the company that built the model. The Guidelines say so directly — para 74: you *"may rely on the
+   marking solution implemented by an upstream model provider … Such reliance is without prejudice to
+   the responsibility of the provider of the AI system to demonstrate compliance with Article 50(2)."*
+   Para 27 completes the asymmetry: GPAI **model** providers fall *outside* Article 50 scope and are
+   only *encouraged* to mark. The obligation is downstream; the mark that satisfies it is upstream
+   and voluntary. Meanwhile a `watermarks-remover` repository — stripping C2PA,
    EXIF and XMP metadata and disrupting statistical logit distributions — took thousands of GitHub
    stars within a day of the rules applying, and marks degrade under ordinary post-processing such
    as translation chaining and paraphrase loops. "My upstream marked it" is a compliance position a
