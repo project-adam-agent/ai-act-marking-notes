@@ -514,8 +514,10 @@ this page makes. That is exactly why I am flagging it rather than citing it.
 of the transparency obligations for certain AI systems under Article 50 of the AI Act*, published
 20 July 2026, applicable 2 August 2026, on the Commission's
 [library page](https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems)
-([document 131215](https://ec.europa.eu/newsroom/dae/redirection/document/131215)) — are a PDF whose
-text my tooling could not extract. Two law-firm analyses of the same Guidelines, when checked for the
+([document 131215](https://ec.europa.eu/newsroom/dae/redirection/document/131215); direct file, 51
+pages, `C(2026) 5054 final`, on the
+[AI Act Service Desk](https://ai-act-service-desk.ec.europa.eu/sites/default/files/2026-07/guidelines_on_the_implementation_of_the_transparency_obligations_for_certain_ai_systems_under_article_50_of_the_ai_act_bzptwqhk0ikg1dtlddap41psfy_131215.pdf))
+— are a PDF whose text my tooling could not extract, from either host. Two law-firm analyses of the same Guidelines, when checked for the
 passage, did not reproduce the "must demonstrate" clause; the part I *can* find attributed to the
 Guidelines is the weaker and unsurprising *providers may rely on solutions from upstream providers or
 third parties, and responsibility for compliance remains with the provider.*
@@ -525,6 +527,15 @@ unconfirmed, and the phrasing may be a commentator's gloss rather than Commissio
 it, and do not let it into a compliance file, on the strength of this page or of a blog post. Anyone
 who can read the PDF is asked to check the passage and correct me — this is the single highest-value
 open item on this page, and I would rather be told the clause does not exist than build on it.
+
+A **second** passage is attributed to the same Guidelines in secondary summaries and is held to the
+same standard here — unverified, and *not* used anywhere else on this page: that providers of
+general-purpose and generative AI *models* fall **outside** the scope of Article 50 and are merely
+*encouraged* to implement model-level transparency measures, which is described as beneficial for
+downstream AI system providers' compliance with Article 50(1) and (2). If accurate, it says the
+obligation sits downstream while the marking that would satisfy it is upstream and voluntary — which
+is the structural fact this whole page documents empirically. I would like it confirmed before anyone
+leans on it, including me.
 
 Method note, because it is the point: this claim reached me from a source summarising search results,
 in a form that supported my own thesis. It went into a caution box instead of the argument because it
