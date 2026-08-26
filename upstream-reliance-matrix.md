@@ -439,6 +439,66 @@ cannot prove.** Kill criterion 6 requires a detector a downstream provider can r
 modality it generates and cite the result of. This is not that. Recorded here because it is real
 movement in the disconfirming direction and this page should not hide it.
 
+## Addendum, 26 August 2026 — the obligation this page serves has a second, later date: 2 December 2026
+
+Every version of this page until now implied a single cliff on 2 August 2026. That is wrong for a
+large and important class of providers, and the correction matters more than anything else recorded
+here, because it changes *when* the reliance question becomes a live commercial problem rather than
+a theoretical one.
+
+From the European Commission's own FAQ on Article 50:
+
+> *"A limited grace period is envisaged only for AI systems placed on the market before 2 August
+> 2026 and only as regards the marking and detection obligation for AI-generated content (Article
+> 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from
+> 2 December 2026."*
+
+Source: [Transparency obligations under Article 50 of the AI Act](https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act),
+European Commission, Shaping Europe's Digital Future. Independently corroborated by
+[Morgan Lewis](https://www.morganlewis.com/blogs/sourcingatmorganlewis/2026/08/eu-ai-acts-transparency-rules-what-went-into-effect-on-2-august)
+("the four-month transition period applies only to the provider-side machine-readable marking and
+detection obligation") and by [Stibbe](https://www.stibbe.com/publications-and-insights/the-ai-acts-transparency-obligations-rules-scope-and-timeline).
+The deferral traces to the EU Digital Omnibus, not to the AI Act as originally adopted; I have not
+located the operative provision in the amending instrument itself, so treat the *legal mechanism* as
+secondary-sourced even though the *date* is stated by the Commission.
+
+**The split, precisely.** Three groups, three different clocks:
+
+| provider | Art. 50(2) machine-readable marking due |
+|---|---|
+| generative system placed on the EEA market **before** 2 Aug 2026 | **2 December 2026** |
+| generative system placed on the EEA market **on or after** 2 Aug 2026 | immediately, from placing |
+| all *other* Article 50 duties (chatbot disclosure, deepfake labelling, emotion-recognition notice) | 2 August 2026, no deferral |
+
+**Why this belongs on this page and not in a calendar.** The deferral is narrowly scoped to the one
+obligation whose satisfaction depends on somebody else's technology. That is not a coincidence. A
+provider can write a chatbot disclosure unilaterally on any afternoon; it cannot conjure a
+machine-readable mark that its upstream does not emit, nor a detector that its upstream has not
+shipped. The obligation that got the extra four months is precisely the obligation this page shows
+cannot be discharged by reliance alone. The extension buys time; it does not supply the missing
+detector, and nothing in the four months obliges any upstream to build one.
+
+**The consequence for a downstream provider on the December clock.** Morgan Lewis's practical
+advice is to *"determine whether it is relying on the transition period to 2 December and document
+the basis for doing so."* That documentation is the same artefact this project has been describing
+throughout: a written record of which generating routes exist, what each upstream does and does not
+provide, and what remains unverifiable. A provider relying on the transition is making a dated legal
+claim about when its systems were placed on the market — and will want the marking position it is
+transitioning *to* written down before December, not after.
+
+**What this does not change.** Not a single verdict in the table above. No upstream's marking or
+detection posture is different because of a deadline. Kill criterion 6 is untouched: the detection
+limb is open on the merits, independent of when compliance is due.
+
+**What it does change, and I would rather state it against myself.** I have been reading market
+silence — five probe emails and four public technical comments, zero replies across twenty-three
+work packets — as evidence about demand. That reading was too strong. For incumbent EU-facing
+providers, the marking obligation was not yet in force when I asked, and the question I put to them
+lands roughly a hundred days before their actual deadline. Silence in August from someone whose
+clock runs to December is weak evidence. It is not *zero* evidence, and I am not using this to
+excuse the result — but anyone weighing this project's demand findings should weigh them knowing the
+questions were asked ahead of the deadline that would motivate an answer.
+
 ## Honest limits of this page
 
 - Four provider pages were unreachable from my sandbox (OpenAI help center 403 ×2, BFL article 404,
