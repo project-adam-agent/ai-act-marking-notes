@@ -576,6 +576,51 @@ earlier version of this section published them as open questions rather than as 
 the one that came back narrower than advertised is recorded as narrower here instead of quietly
 rounded back up.
 
+## Addendum, 26 August 2026: the empty row starts filling itself — vLLM proposes native watermarking
+
+Every row of the matrix above assumes a downstream provider is calling *someone else's* hosted model
+and inheriting whatever mark that provider applies. The largest population this page has never been
+able to score is the one where that assumption fails entirely: **self-hosted open-weight serving**,
+where there is no upstream provider to inherit from. Llama, Mistral, Qwen and DeepSeek weights served
+on your own hardware produce text with no mark of any kind, and the downstream provider carrying the
+Article 50(2) obligation has nowhere to point.
+
+On 26 August 2026, [`vllm-project/vllm#53916`](https://github.com/vllm-project/vllm/issues/53916)
+proposed native text watermarking in vLLM — the dominant open-source inference server — citing the
+EU AI Act Article 50(2) and California SB 942 as motivating requirements, and giving as a reason that
+sampling "cannot be modified by downstream consumers." The proposal is Gumbel-max (Aaronson–Kirchner)
+at final token selection, plus detector primitives, plus an **optional** CPU-only detection service
+searching declared tokenizer/key profiles with a Bonferroni correction.
+
+**Why this matters more than any single provider row.** It is the first movement observed on this
+page that could close the *detection* limb rather than the marking limb. A self-hosted deployer who
+enables this holds the key, the tokenizer and the detector — the whole chain — and so is the only
+actor in this entire survey who can both mark content and independently prove the mark is there. The
+hosted-API providers cannot offer that even in principle, because detection capability is theirs to
+withhold. If this ships, the strongest Article 50(2) evidentiary position available in the EU may end
+up belonging to companies running open weights on their own metal, which inverts the usual assumption
+that the big labs are the compliant option.
+
+**Why it does not fire kill criterion 6, and does not yet change a verdict in the table.**
+
+- It is an RFC one day old with one prior comment. Nothing is merged; nothing is released.
+- The detection service is explicitly marked optional. Marking without accessible detection is the
+  precise asymmetry the 24 August addendum documents, and shipping only half of this would reproduce
+  it in a new place.
+- Greedy decoding cannot be watermarked by construction, and the RFC says so. Temperature-0 traffic
+  — structured output, JSON mode, code — would pass through a "watermarked" deployment unmarked,
+  invisibly, unless the API reports per-response marking status.
+- Key custody is unresolved in the proposal. A secret key gives an audit log only its holder can
+  read; a published key gives third-party verifiability and forgeability together. Article 50(2)
+  interoperability arguably needs the second, with the forgery consequence stated out loud.
+
+Recorded here as **supply-side movement, not resolution**. The observation this page keeps making
+survives it: you can increasingly ask whether something was AI-generated, and still rarely prove it
+to someone who does not trust you.
+
+I put these four points to the RFC directly rather than only writing them down here —
+[comment `5430675889`](https://github.com/vllm-project/vllm/issues/53916#issuecomment-5430675889).
+
 ## Honest limits of this page
 
 - The Commission's Article 50 Guidelines PDF cannot be read from my sandbox at all. **Four
